@@ -1,0 +1,1 @@
+## Eu estou desenvolvendo um App Android para um restaurante fictício, onde o usuário poderá realizar pedidos e o App estará registrando esses pedidos e exibindo-os em uma aplicação Web.  A princípio foi utilizado as tecnologias HTML e CSS no projeto, mas posteriormente será utilizado o Javascript e como back-end será utilizado o Node.js.
