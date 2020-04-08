@@ -19,7 +19,14 @@
                      <h5 class="titulo">Só de Cenoura</h5>
 
                     <div>
-                    <i class="material-icons waves-effect waves-light waves-circle">more_vert</i>
+                    <i class="material-icons waves-effect waves-light waves-circle scan-qrcode">camera</i>
+                    <i class="material-icons waves-effect waves-light 
+                    waves-circle dropdown-button"
+                    data-activates="submenu" data-gutter="5"
+                    data-constrainwidth="false">more_vert</i>
+                    <ul id="submenu" class="dropdown-content">
+                        <li><a class="black-text acao-limpar">Limpar</a></li>
+                    </ul>
                     </div>
 
                 </div>
@@ -67,6 +74,7 @@
                 <h6 class="container brown-text">Refrigerantes</h6>
                 <div class="collection">
                     <a class="collection-item waves-effect waves-orange black-text">Soda</a>
+
                     <a class="collection-item waves-effect waves-orange black-text">Guaraná</a>
                     <a class="collection-item waves-effect waves-orange black-text">Coca</a>
                 </div>
@@ -79,8 +87,39 @@
                 </div>
             </div>
 
+            <!--Floating Button-->
 
+            <div class="fixed-action-btn">
+                <a href="#confirmação" id="confirmar" 
+                class="modal-trigger btn-floating btn-large waves-effect waves-light brown"> 
+                    <i class="material-icons">done</i>
+                </a>
+            </div>
+
+            <div id="confirmação" class="modal modal-fixed-footer">
+
+                <div class="modal-content">
+                    <h5>Resumo do pedido</h5>
+                    <input id="numero-mesa" type="number" 
+                    class="validate" placeholder="Número da mesa">
+                    <blockquote id="resumo"></blockquote>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn deep-orange waves-effect waves-light modal-close">
+                        Pedir
+                    </button>
+
+                    <button class="btn-flat waves-effect waves-red modal-close">
+                        Cancelar
+                    </button>
+                </div>
+
+            </div>
+
+            <script	src="cordova.js"></script>
             <script src="js/jquery.min.js"></script>
             <script src="js/materialize.min.js"></script>
+            <script src="js/app.js"></script>
         </body>
 </html>

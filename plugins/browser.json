@@ -9,6 +9,12 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "org.sergiolopes.garconapp"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "org.sergiolopes.garconapp"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "org.sergiolopes.garconapp"
     }
   },
   "dependent_plugins": {}
