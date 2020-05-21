@@ -10,10 +10,11 @@ $('.collection').on('click', '.collection-item', function(){
     }
     $badge.text(parseInt($badge.text()) +1);
 })
-    .on('click', '.badge', function() {
-    $(this).remove();
-    return false;
-    });
+
+.on('click', '.badge', function() {
+$(this).remove();
+return false;
+});
 
 //Inicia a trigger
 $('.modal-trigger').leanModal();
@@ -50,6 +51,25 @@ $('.scan-qrcode').on('click', function(){
         }
     );
 })
+
+$('.acao-finalizar').on('click', function(){
+    $.ajax({
+        url: 'http://cozinhapp.sergiolopes.org/novo-pedido',
+        data:{
+            mesa: $('#numero-mesa').val(),
+            pedido: $('#resumo').text()
+        },
+        error: function(erro){
+            Materialize.toast(erro.responseText, 3000, 'red-text');
+        },
+        success: function(dados){
+            Materialize.toast(dados, 2000);
+
+            $('#numero-mesa').val('');
+            $('.badge').remove();
+        }
+    });
+});
 
 
 
